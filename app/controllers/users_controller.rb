@@ -15,5 +15,5 @@ post '/users' do #post is to submit the form to the database
 end 
 
 get '/users' do
-	erb :"users/user_profile"
+	erb :"users/profile"
 end 

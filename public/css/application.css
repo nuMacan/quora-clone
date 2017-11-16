@@ -1,6 +1,27 @@
 .body{
-	background-image: url("https://qsf.ec.quoracdn.net/-3-images.home.illo_1920.png-26-3b3ebdbaa4afd3e2.png")
+	background-image: url("https://qsf.ec.quoracdn.net/-3-images.home.illo_1920.png-26-3b3ebdbaa4afd3e2.png");
+	width: 100%;
+	height: 100%;
+	background-size: cover;
 }
+
+.box{
+	background-color: white;
+	
+    margin: auto;
+	display: auto;
+  	text-align: center;
+  	background-color: white;
+}
+
+h1{
+	text-align: center;
+	color: darkred;
+	font-size: 5em;
+	font-family: american-type-writer;
+}
+
+
 /*This is the begining of captcha css format */
 .capbox {
 	background-color: #92D433;
