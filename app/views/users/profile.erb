@@ -1,7 +1,18 @@
-<p>Hello, this your profile<p>
+<h4>Quora<h4>
 
 
 
-<form method="get" action="/sessions">
-    <input type=submit value="Logout">
-</form>
+<!-- #this method is to show the user with global defintion calling to the method in user_controller.rb referrring to 
+@user = User.find(params[:id]) -->
+<!-- <p><%= @user.email %><p>	
+<p><%= @user.first_name %><p> -->
+
+
+<!-- while calling the database to html such as bellow here could works because there's a def method in app/helpers/user.rb for current_user -->
+<p>Hello <%= current_user.first_name.capitalize %> <%= current_user.last_name.capitalize %><p>
+
+
+
+
+
+

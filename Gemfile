@@ -7,6 +7,8 @@ source 'https://rubygems.org'
 gem 'sinatra'
 gem 'sinatra-contrib'
 
+#for passwrod authentication
+gem 'bcrypt'
 # Adding thin gem as advised
 gem 'thin'
 
@@ -18,6 +20,7 @@ gem 'byebug'
 
 # Adding Database elements
 gem 'pg'
+gem 'sqlite3'
 
 # Adding rake for management
 gem 'rake'

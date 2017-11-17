@@ -1,19 +1,67 @@
 
-get '/users/new.erb' do #this to get the form 
+get '/users/new' do #this to get the form 
    erb :"users/new"
 end
 
-post '/users' do #post is to submit the form to the database
-  p params
+#post is to submit the form to the database 
+#to sign up
+post '/users' do 
   user = User.new(params[:user])
   if user.save
-    redirect "users/profile"
+    erb :"users/sign_in"
   else 
-    p users.errors
+    user.errors
     redirect "users/new"
   end 
 end 
 
-get '/users' do
-	erb :"users/profile"
-end 
+# get '/users' do
+# 	erb :"users/profile"
+# end 
+
+get '/users/:id' do
+  # params[:id]
+  # p params[:id] = 1
+  # p params[:id] = 340
+  # p params[:id] = wassup
+    # p params[:id] = "1+1=2"
+
+    # find  (always find by id)
+    # User.find(1)
+
+    # find_by (specify what you fnd by)
+    # User.find_by(first_name : params[:first_name], last_name: params[:last_name])
+    # User.find_by(last_name: params[:last_name])
+
+  @user = User.find(params[:id]) #User.find(1)
+  # session[:user_id] = user.id
+  erb :"users/profile"
+end
+
+
+# #controller
+# @all_user = User.all
+
+
+# #view file
+# @all_user.each do |user|
+#   <a href="/users/<%= user.id %>"> <%= user.first_name %>'s Profile </a>
+# end
+
+
+
+# <a href="/users/1+1=2">
+
+# Rick's Profile #/users/1
+# Sheng's Profile /users/2
+# Nu's Profile /users/340
+
+
+
+
+
+
+
+
+
+
