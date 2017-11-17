@@ -4,13 +4,17 @@
 <br><br><br><br><br><br>
 <div class="box">
 	<h1>Quora</h1>
-<h4>A place to share knowledge and better understand the world</h2>
+<h4>A place to share knowledge and better understand the world</h4>
 
-<a href="/users/new.erb"><h3>Sign up</h3></a>
+<a href="/users/new.erb"><h2>Sign up</h2></a>
 <p> By signing up you indicate that you have read and agree to the Terms of Service and Privacy Policy.</p>
-
-<a href="/users/edit.erb"><h3>Log in</h3></a>
+<br>
+<h2>Login</h2>
+<form method="post" action="/sessions">
+    <input type="text" placeholder="Email" name="user[email]"><br>
+    <input type="password" placeholder="Password" name="user[password]"></br>
+    <input type=submit value="Login">
+</form>
 <br><br>
-<p> By signing up you indicate that you have read and agree to the Terms of Service and Privacy Policy.</p>
 </div>
 </div>

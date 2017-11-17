@@ -1,6 +1,6 @@
 <h2>Sign up for an account</h1>
 
-<form method="posts" action="/users"  onsubmit="return checkform(this);" >
+<form method="posts" action="/users" > <!--this for capstcha: onsubmit="return checkform(this);" -->
 	First Name<br>
 	<input type="text" name="user[first_name]"><br>
 	Last Name<br>
@@ -13,7 +13,7 @@
 	<p>By clicking "Sign Up" you indicate that you have read and agree to the Terms of Service and Privacy Policy.<p>
 
 	<!-- START CAPTCHA -->
-<br>
+<!-- <br>
 <div class="capbox">
 
 <div id="CaptchaDiv"></div>
@@ -26,7 +26,7 @@ Type the above number:<br>
 
 </div>
 </div>
-<br><br>
+<br><br> -->
 <!-- END CAPTCHA -->
 	<input type=submit value="Cancel">
 	<input type=submit value="Signup">
@@ -36,47 +36,47 @@ Type the above number:<br>
 
 // Captcha Script
 
-function checkform(theform){
-var why = "";
+// function checkform(theform){
+// var why = "";
 
-if(theform.CaptchaInput.value == ""){
-why += "- Please Enter CAPTCHA Code.\n";
-}
-if(theform.CaptchaInput.value != ""){
-if(ValidCaptcha(theform.CaptchaInput.value) == false){
-why += "- The CAPTCHA Code Does Not Match.\n";
-}
-}
-if(why != ""){
-alert(why);
-return false;
-}
-}
+// if(theform.CaptchaInput.value == ""){
+// why += "- Please Enter CAPTCHA Code.\n";
+// }
+// if(theform.CaptchaInput.value != ""){
+// if(ValidCaptcha(theform.CaptchaInput.value) == false){
+// why += "- The CAPTCHA Code Does Not Match.\n";
+// }
+// }
+// if(why != ""){
+// alert(why);
+// return false;
+// }
+// }
 
-var a = Math.ceil(Math.random() * 9)+ '';
-var b = Math.ceil(Math.random() * 9)+ '';
-var c = Math.ceil(Math.random() * 9)+ '';
-var d = Math.ceil(Math.random() * 9)+ '';
-var e = Math.ceil(Math.random() * 9)+ '';
+// var a = Math.ceil(Math.random() * 9)+ '';
+// var b = Math.ceil(Math.random() * 9)+ '';
+// var c = Math.ceil(Math.random() * 9)+ '';
+// var d = Math.ceil(Math.random() * 9)+ '';
+// var e = Math.ceil(Math.random() * 9)+ '';
 
-var code = a + b + c + d + e;
-document.getElementById("txtCaptcha").value = code;
-document.getElementById("CaptchaDiv").innerHTML = code;
+// var code = a + b + c + d + e;
+// document.getElementById("txtCaptcha").value = code;
+// document.getElementById("CaptchaDiv").innerHTML = code;
 
-// Validate input against the generated number
-function ValidCaptcha(){
-var str1 = removeSpaces(document.getElementById('txtCaptcha').value);
-var str2 = removeSpaces(document.getElementById('CaptchaInput').value);
-if (str1 == str2){
-return true;
-}else{
-return false;
-}
-}
+// // Validate input against the generated number
+// function ValidCaptcha(){
+// var str1 = removeSpaces(document.getElementById('txtCaptcha').value);
+// var str2 = removeSpaces(document.getElementById('CaptchaInput').value);
+// if (str1 == str2){
+// return true;
+// }else{
+// return false;
+// }
+// }
 
-// Remove the spaces from the entered and generated code
-function removeSpaces(string){
-return string.split(' ').join('');
-}
+// // Remove the spaces from the entered and generated code
+// function removeSpaces(string){
+// return string.split(' ').join('');
+// }
 </script>
 

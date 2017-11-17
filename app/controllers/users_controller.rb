@@ -6,7 +6,7 @@ end
 post '/users' do #post is to submit the form to the database
   p params
   user = User.new(params[:user])
-  if users.save
+  if user.save
     redirect "users/profile"
   else 
     p users.errors
