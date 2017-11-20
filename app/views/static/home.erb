@@ -1,0 +1,53 @@
+
+
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="/css/application.css">		
+</head>
+
+<body>
+  <ul class="navbar">
+    <li id="tagline"><b>Quora</b></li>
+    <li><a href="/static/home">Home</a></li>
+    <li><a href="news.asp">Answer</a></li>
+    <li><a href="contact.asp">Notification</a></li>
+    <li>
+      <form method=post action=/users>
+      <input id="search_box" type=text placeholder="Search Quora" name="user[]">
+      </form></li>
+
+    <li><a href="/users/profile"><%= current_user.first_name.capitalize %> <%= current_user.last_name.capitalize %></a></li>
+    <li><a href="Add question">Add Question</a></li>
+  </ul>
+<br><br><br><br><br>
+
+  <form action= "/questions" method="post">
+    <tr>
+    <div class="prompt"><%= current_user.first_name.capitalize %> <%= current_user.last_name.capitalize %></div><br>
+    <div class="sub">
+    <input id="question" type="text" placeholder="What is your question" name="question[the_question]">
+    <input type="submit" value="Ask">
+    </div>
+  </tr>
+  </form>
+<br><br><br>
+
+<table >
+  <tr>
+    <th>Question</th>
+    <th>Answer</th>
+    <th>Vote</th>
+  </tr>
+ 
+<% @all_questions.each do |q| %>
+  <tr> 
+    <td><%= q.the_question %> </td>
+    <td><a class="btn btn-primary" href="/qna/question_and_answers/<%= q.id%>">ANSWER!</a></td>
+  </tr>
+<% end %>
+</table>
+
+<br> <br>
+<br><br>
+
+</body>

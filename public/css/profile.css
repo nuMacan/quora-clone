@@ -1,0 +1,37 @@
+ul {
+    display: inline-flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-bottom: groove;
+    font-family: verdana, sans serif;
+    position: fixed;
+    overflow: auto;
+
+}
+
+li {
+    display: block;
+    float: center;
+    padding: 14px 16px;
+    text-align: left;
+    background-color: white;
+    text-decoration: none;
+}
+
+
+#tagline {
+    font-family: tiempos;
+    font-size: 1.2em;
+    color: darkred;
+    font-style: bolder;
+}
+
+#search_box {
+    padding: 14px 150px;
+    outline-color: black;
+    text-align: left;
+    
+}
+
