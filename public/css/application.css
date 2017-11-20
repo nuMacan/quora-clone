@@ -62,3 +62,20 @@ div.sub{
    margin: auto;
    font-size-adjust: 2em;
  }
+
+ table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    color: lightgray;
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    /*background-color: lightblue;
+*/}

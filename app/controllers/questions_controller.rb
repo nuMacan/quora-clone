@@ -1,4 +1,4 @@
-get '/qna/question' do
+get '/qna/questions' do
 	erb :"qna/questions"
 end 
 
@@ -7,10 +7,11 @@ end
 post '/questions' do
 	question = Question.new(params[:question])
 	if question.save
-		erb  :"qna/questions"
+		redirect "static/home"
 		# redirect "/user/question/#{question.id}"
 	else
 		p url.errors
+		redirect "/"
 	end
 end
 
@@ -18,7 +19,5 @@ get '/qna/questions/:id' do
   questions = Question.all
   erb :"static/home"
 end
-
-
 
 

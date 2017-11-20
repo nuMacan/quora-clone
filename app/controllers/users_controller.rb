@@ -21,9 +21,10 @@ post '/users' do
   end 
 end 
 
-get '/users/profile.erb' do
+get '/users/profile' do
   erb :"users/profile"
 end 
+
 
 # get '/users/:id' do
 #   # params[:id]
