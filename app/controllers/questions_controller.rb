@@ -1,3 +1,9 @@
+get '/qna/question' do
+	erb :"qna/questions"
+end 
+
+
+
 post '/questions' do
 	question = Question.new(params[:question])
 	if question.save

@@ -2,11 +2,10 @@
 <html>
 <head>
 	<title>Home</title>
-	<link rel="stylesheet" type="text/css" href="/css/application.css">	
-	
+	<link rel="stylesheet" type="text/css" href="/css/application.css">		
 </head>
+
 <body>
- 
   <ul class="navbar">
   <li id="tagline"><b>Quora</b></li>
   <li><a href="/static/home">Home</a></li>
@@ -16,38 +15,30 @@
     <form method=post action=/users>
     <input id="search_box" type=text placeholder="Search Quora" name="user[]">
     </form></li>
+
   <li><a href="/users/profile"><%= current_user.first_name.capitalize %> <%= current_user.last_name.capitalize %></a></li>
   <li><a href="Add question">Add Question</a></li>
   </ul>
-  </div>
+  
 <br><br><br><br><br>
 
+  <form action= "/questions" method="post">
+    <tr>
+    <div class="prompt"><%= current_user .first_name.capitalize %> <%= current_user.last_name.capitalize %></div>
+    <div class="sub">
+    <input id="question" type="text" placeholder="What is your question" name="question[the_question]">
+    <input type="submit" value="Ask">
+    </div>
+  </tr>
+  </form>
+<br><br><br>
 
-<form action= "/questions" method="post">
-<!--  method above is revering to controller/static the post with the name 'urls' -->
-  <tr>
-  <div class="prompt"><%= current_user .first_name.capitalize %> <%= current_user.last_name.capitalize %></div>
-  <div class="sub">
-  <input id="question" type="text" placeholder="What is your question" name="question[the_question]">
-  <input type="submit" value="Ask">
-  </div>
-</form>
-</tr>
 <table>
   <tr>
     <th>Question</th>
     <th>Answer</th>
   </tr>
-</table>
-
- 
- <!-- this code could work because urls usign the "@" to make it global method and the url.original_url here is refering to the cod block of ur in @urls.each do |url|   -->
-
 
 
 </body>
 </html>
-
-
-
-
