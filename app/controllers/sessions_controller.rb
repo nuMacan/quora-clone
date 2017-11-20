@@ -1,4 +1,5 @@
 #this is to log in 
+
 post '/sessions' do 
 
 	p user = User.find_by(email: params[:user][:email])

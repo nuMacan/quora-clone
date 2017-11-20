@@ -3,6 +3,10 @@ get '/users/new' do #this to get the form
    erb :"users/new"
 end
 
+get '/users/sign_in' do
+  erb :"/users/sign_in"
+end 
+
 #post is to submit the form to the database 
 #to sign up
 post '/users' do 
@@ -15,9 +19,6 @@ post '/users' do
   end 
 end 
 
-# get '/users' do
-# 	erb :"users/profile"
-# end 
 
 get '/users/:id' do
   # params[:id]
@@ -38,18 +39,21 @@ get '/users/:id' do
   erb :"users/profile"
 end
 
+get '/static/home' do 
+  erb :"/static/home"
+end
+
+get '/users/profile' do 
+    @user = User.find_by(current_user) #User.find(1)
+  erb :"/users/profile"
+end 
 
 # #controller
 # @all_user = User.all
-
-
 # #view file
 # @all_user.each do |user|
 #   <a href="/users/<%= user.id %>"> <%= user.first_name %>'s Profile </a>
 # end
-
-
-
 # <a href="/users/1+1=2">
 
 # Rick's Profile #/users/1

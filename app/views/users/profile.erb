@@ -1,4 +1,45 @@
-<h4>Quora<h4>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>user profile</title>
+	<link rel="stylesheet" type="text/css" href="/css/profile.css">	
+	
+</head>
+<body>
+ 
+  <ul>
+  <li id="tagline"><b>Quora</b></li>
+  <li><a href="/static/home">Home</a></li>
+  <li><a href="news.asp">Answer</a></li>
+  <li><a href="contact.asp">Notification</a></li>
+  <li id="search_box">
+    <form method=post action=/users>
+    <input type=text placeholder="Search Quora" name="user[]">
+    <input type=submit value="search">
+    </form></li>
+  <li><%= current_user.first_name.capitalize %> <%= current_user.last_name.capitalize %></li>
+  <li><a href="Add question">Add Question</a></li>
+  </ul>
+  </div>
+<br><br><br>
+
+
+
+
+<p>Hello <%= current_user.first_name.capitalize %> <%= current_user.last_name.capitalize %></p>
+<p>profile</p>
+<p>profile</p>
+<p>helo</p>
+<p>helo</p>
+<p>helo</p>
+<p>helo</p>
+<p>helo</p>
+<p>helo</p>
+<p>helo</p>
+</body>
+</html>
+
+<!-- Make separate css file for this user page  -->
 
 
 
@@ -7,9 +48,7 @@
 <!-- <p><%= @user.email %><p>	
 <p><%= @user.first_name %><p> -->
 
-
 <!-- while calling the database to html such as bellow here could works because there's a def method in app/helpers/user.rb for current_user -->
-<p>Hello <%= current_user.first_name.capitalize %> <%= current_user.last_name.capitalize %><p>
 
 
 
