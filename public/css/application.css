@@ -1,4 +1,4 @@
-.horizontalbar {
+.navbar {
     display: inline-flex;
     list-style-type: none;
     margin: 0;
@@ -8,18 +8,16 @@
     font-family: verdana, sans serif;
     position: fixed;
     overflow: auto;
-    font-size-adjust: 1em;
 
 }
 
-.makeinline {
+li {
     display: block;
     float: center;
     padding: 14px 16px;
     text-align: left;
     background-color: white;
     text-decoration: none;
-
 }
 
 
@@ -36,20 +34,4 @@
     text-align: left;
     
 }
-
-.vertical-menu {
-    width: 200px;
-    display: left; /* Set a width if you like */
-}
-
-.vertical-menu li{
-    background-color: #eee; /* Grey background color */
-    color: black; /* Black text color */
-    display: block; /* Make the links appear below each other */
-    padding: 12px; /* Add some padding */
-    text-decoration: none; /* Remove underline from links */
-}
-
-
-
 
