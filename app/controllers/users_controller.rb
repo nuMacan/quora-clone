@@ -44,7 +44,7 @@ get '/static/home' do
 end
 
 get '/users/profile' do 
-    @user = User.find_by(current_user) #User.find(1)
+    user = User.find_by(@current_user) #User.find(1)
   erb :"/users/profile"
 end 
 

@@ -29,9 +29,36 @@ li {
 }
 
 #search_box {
-    padding: 14px 150px;
+    width: 500px;
+    height: 30px
     outline-color: black;
     text-align: left;
-    
 }
 
+div.prompt {
+     text-align: center;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1.2em;
+    font-weight: 100;
+    line-height: 15px;
+    table-layout: center;
+}
+
+div.sub{
+    text-align: center;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 2em;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+    line-height: 15px;
+    table-layout: center;
+    width: 100%;
+    }
+
+ #question {
+   width: 500px;
+   height: 30px;
+   margin: auto;
+   font-size-adjust: 2em;
+ }
